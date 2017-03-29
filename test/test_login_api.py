@@ -50,6 +50,14 @@ class TestLoginApi(unittest.TestCase):
         """
         pass
 
+    def test_auth_login_post(self):
+        """
+        Test case for auth_login_post
+
+        return access token upon successful basic or html auth (use username/password, or use basic auth)
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

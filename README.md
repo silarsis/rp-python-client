@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *AuthedApi* | [**deployments_userkey_meter_historical_p_get**](docs/AuthedApi.md#deployments_userkey_meter_historical_p_get) | **GET** /deployments/{userkey}/meter/historical/p | real power measurements in kW at the grid connection
 *AuthedApi* | [**userkeys_get**](docs/AuthedApi.md#userkeys_get) | **GET** /userkeys | all userkeys/battery system identifiers for the current user
 *LoginApi* | [**auth_login_get**](docs/LoginApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
+*LoginApi* | [**auth_login_post**](docs/LoginApi.md#auth_login_post) | **POST** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
 
 
 ## Documentation For Models
