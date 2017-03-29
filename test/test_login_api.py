@@ -46,7 +46,7 @@ class TestLoginApi(unittest.TestCase):
         """
         Test case for auth_login_get
 
-        return access token upon successful basic or html auth (use username/password, or use basic auth)
+        return access token upon successful basic auth
         """
         pass
 

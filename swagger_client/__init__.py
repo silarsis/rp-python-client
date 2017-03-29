@@ -25,6 +25,7 @@
 from __future__ import absolute_import
 
 # import models into sdk package
+from .models.auth_params import AuthParams
 from .models.inline_response_200 import InlineResponse200
 from .models.inline_response_200_1 import InlineResponse2001
 

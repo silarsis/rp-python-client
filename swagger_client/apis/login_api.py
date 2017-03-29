@@ -53,8 +53,8 @@ class LoginApi(object):
 
     def auth_login_get(self, **kwargs):
         """
-        return access token upon successful basic or html auth (use username/password, or use basic auth)
-        Send username and password either as basic auth, or as parameters in the GET request, and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+        return access token upon successful basic auth
+        Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -66,8 +66,6 @@ class LoginApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str username: Username for access
-        :param str password: Password for access
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
@@ -81,8 +79,8 @@ class LoginApi(object):
 
     def auth_login_get_with_http_info(self, **kwargs):
         """
-        return access token upon successful basic or html auth (use username/password, or use basic auth)
-        Send username and password either as basic auth, or as parameters in the GET request, and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+        return access token upon successful basic auth
+        Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -94,14 +92,12 @@ class LoginApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str username: Username for access
-        :param str password: Password for access
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['username', 'password']
+        all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -124,10 +120,6 @@ class LoginApi(object):
         path_params = {}
 
         query_params = {}
-        if 'username' in params:
-            query_params['username'] = params['username']
-        if 'password' in params:
-            query_params['password'] = params['password']
 
         header_params = {}
 
@@ -147,7 +139,7 @@ class LoginApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['basic']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -179,8 +171,7 @@ class LoginApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str username: Username for access
-        :param str password: Password for access
+        :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
@@ -207,14 +198,13 @@ class LoginApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str username: Username for access
-        :param str password: Password for access
+        :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['username', 'password']
+        all_params = ['body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -242,12 +232,10 @@ class LoginApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'username' in params:
-            form_params.append(('username', params['username']))
-        if 'password' in params:
-            form_params.append(('password', params['password']))
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
