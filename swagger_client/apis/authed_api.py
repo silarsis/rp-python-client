@@ -139,7 +139,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -251,7 +251,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -381,7 +381,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -493,7 +493,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -623,7 +623,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -753,7 +753,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -883,7 +883,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -1013,7 +1013,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -1143,7 +1143,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -1273,7 +1273,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -1378,7 +1378,7 @@ class AuthedApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = ['api_key', 'basic']
+        auth_settings = ['api_key']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,

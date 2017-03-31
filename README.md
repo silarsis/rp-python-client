@@ -55,9 +55,6 @@ from pprint import pprint
 swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure HTTP basic authorization: basic
-swagger_client.configuration.username = 'YOUR_USERNAME'
-swagger_client.configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.AuthedApi()
 
