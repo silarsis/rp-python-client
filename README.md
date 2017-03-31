@@ -86,7 +86,7 @@ Class | Method | HTTP request | Description
 *AuthedApi* | [**deployments_userkey_house_historical_get**](docs/AuthedApi.md#deployments_userkey_house_historical_get) | **GET** /deployments/{userkey}/house/historical | house consumption in kW
 *AuthedApi* | [**deployments_userkey_inverter_historical_p_get**](docs/AuthedApi.md#deployments_userkey_inverter_historical_p_get) | **GET** /deployments/{userkey}/inverter/historical/p | the battery inverter data as real_power in kW
 *AuthedApi* | [**deployments_userkey_meter_historical_p_get**](docs/AuthedApi.md#deployments_userkey_meter_historical_p_get) | **GET** /deployments/{userkey}/meter/historical/p | real power measurements in kW at the grid connection
-*AuthedApi* | [**userkeys_get**](docs/AuthedApi.md#userkeys_get) | **GET** /userkeys | all userkeys/battery system identifiers for the current user
+*AuthedApi* | [**userkeys_get**](docs/AuthedApi.md#userkeys_get) | **GET** /userkeys/ | all userkeys/battery system identifiers for the current user
 *LoginApi* | [**auth_login_get**](docs/LoginApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
 *LoginApi* | [**auth_login_post**](docs/LoginApi.md#auth_login_post) | **POST** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
 

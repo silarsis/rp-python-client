@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**deployments_userkey_house_historical_get**](AuthedApi.md#deployments_userkey_house_historical_get) | **GET** /deployments/{userkey}/house/historical | house consumption in kW
 [**deployments_userkey_inverter_historical_p_get**](AuthedApi.md#deployments_userkey_inverter_historical_p_get) | **GET** /deployments/{userkey}/inverter/historical/p | the battery inverter data as real_power in kW
 [**deployments_userkey_meter_historical_p_get**](AuthedApi.md#deployments_userkey_meter_historical_p_get) | **GET** /deployments/{userkey}/meter/historical/p | real power measurements in kW at the grid connection
-[**userkeys_get**](AuthedApi.md#userkeys_get) | **GET** /userkeys | all userkeys/battery system identifiers for the current user
+[**userkeys_get**](AuthedApi.md#userkeys_get) | **GET** /userkeys/ | all userkeys/battery system identifiers for the current user
 
 
 # **auth_logout_get**

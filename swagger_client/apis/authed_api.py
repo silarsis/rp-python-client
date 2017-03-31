@@ -1355,7 +1355,7 @@ class AuthedApi(object):
 
         collection_formats = {}
 
-        resource_path = '/userkeys'.replace('{format}', 'json')
+        resource_path = '/userkeys/'.replace('{format}', 'json')
         path_params = {}
 
         query_params = {}
