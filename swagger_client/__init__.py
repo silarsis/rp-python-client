@@ -30,8 +30,7 @@ from .models.inline_response_200 import InlineResponse200
 from .models.inline_response_200_1 import InlineResponse2001
 
 # import apis into sdk package
-from .apis.authed_api import AuthedApi
-from .apis.login_api import LoginApi
+from .apis.default_api import DefaultApi
 
 # import ApiClient
 from .api_client import ApiClient

@@ -51,19 +51,18 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: api_key
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: basic
+swagger_client.configuration.username = 'YOUR_USERNAME'
+swagger_client.configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
-api_instance = swagger_client.AuthedApi()
+api_instance = swagger_client.DefaultApi()
 
 try:
-    # de-authenticate the token (always returns success)
-    api_response = api_instance.auth_logout_get()
+    # return access token upon successful basic auth
+    api_response = api_instance.auth_login_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AuthedApi->auth_logout_get: %s\n" % e)
+    print("Exception when calling DefaultApi->auth_login_get: %s\n" % e)
 
 ```
 
@@ -73,19 +72,19 @@ All URIs are relative to *https://virtserver.swaggerhub.com/silarsis/repositpowe
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthedApi* | [**auth_logout_get**](docs/AuthedApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
-*AuthedApi* | [**deployments_userkey_battery_capacity_get**](docs/AuthedApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
-*AuthedApi* | [**deployments_userkey_battery_historical_soc_get**](docs/AuthedApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh
-*AuthedApi* | [**deployments_userkey_components_get**](docs/AuthedApi.md#deployments_userkey_components_get) | **GET** /deployments/{userkey}/components | installed components and their overall status
-*AuthedApi* | [**deployments_userkey_cost_historical_get**](docs/AuthedApi.md#deployments_userkey_cost_historical_get) | **GET** /deployments/{userkey}/cost/historical | energy cost in $
-*AuthedApi* | [**deployments_userkey_generation_historical_p_get**](docs/AuthedApi.md#deployments_userkey_generation_historical_p_get) | **GET** /deployments/{userkey}/generation/historical/p | solar generation data as negative real_power in kW
-*AuthedApi* | [**deployments_userkey_gridcredits_historical_get**](docs/AuthedApi.md#deployments_userkey_gridcredits_historical_get) | **GET** /deployments/{userkey}/gridcredits/historical | earned gridcredits
-*AuthedApi* | [**deployments_userkey_house_historical_get**](docs/AuthedApi.md#deployments_userkey_house_historical_get) | **GET** /deployments/{userkey}/house/historical | house consumption in kW
-*AuthedApi* | [**deployments_userkey_inverter_historical_p_get**](docs/AuthedApi.md#deployments_userkey_inverter_historical_p_get) | **GET** /deployments/{userkey}/inverter/historical/p | the battery inverter data as real_power in kW
-*AuthedApi* | [**deployments_userkey_meter_historical_p_get**](docs/AuthedApi.md#deployments_userkey_meter_historical_p_get) | **GET** /deployments/{userkey}/meter/historical/p | real power measurements in kW at the grid connection
-*AuthedApi* | [**userkeys_get**](docs/AuthedApi.md#userkeys_get) | **GET** /userkeys/ | all userkeys/battery system identifiers for the current user
-*LoginApi* | [**auth_login_get**](docs/LoginApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
-*LoginApi* | [**auth_login_post**](docs/LoginApi.md#auth_login_post) | **POST** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
+*DefaultApi* | [**auth_login_get**](docs/DefaultApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
+*DefaultApi* | [**auth_login_post**](docs/DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
+*DefaultApi* | [**auth_logout_get**](docs/DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
+*DefaultApi* | [**deployments_userkey_battery_capacity_get**](docs/DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
+*DefaultApi* | [**deployments_userkey_battery_historical_soc_get**](docs/DefaultApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh
+*DefaultApi* | [**deployments_userkey_components_get**](docs/DefaultApi.md#deployments_userkey_components_get) | **GET** /deployments/{userkey}/components | installed components and their overall status
+*DefaultApi* | [**deployments_userkey_cost_historical_get**](docs/DefaultApi.md#deployments_userkey_cost_historical_get) | **GET** /deployments/{userkey}/cost/historical | energy cost in $
+*DefaultApi* | [**deployments_userkey_generation_historical_p_get**](docs/DefaultApi.md#deployments_userkey_generation_historical_p_get) | **GET** /deployments/{userkey}/generation/historical/p | solar generation data as negative real_power in kW
+*DefaultApi* | [**deployments_userkey_gridcredits_historical_get**](docs/DefaultApi.md#deployments_userkey_gridcredits_historical_get) | **GET** /deployments/{userkey}/gridcredits/historical | earned gridcredits
+*DefaultApi* | [**deployments_userkey_house_historical_get**](docs/DefaultApi.md#deployments_userkey_house_historical_get) | **GET** /deployments/{userkey}/house/historical | house consumption in kW
+*DefaultApi* | [**deployments_userkey_inverter_historical_p_get**](docs/DefaultApi.md#deployments_userkey_inverter_historical_p_get) | **GET** /deployments/{userkey}/inverter/historical/p | the battery inverter data as real_power in kW
+*DefaultApi* | [**deployments_userkey_meter_historical_p_get**](docs/DefaultApi.md#deployments_userkey_meter_historical_p_get) | **GET** /deployments/{userkey}/meter/historical/p | real power measurements in kW at the grid connection
+*DefaultApi* | [**userkeys_get**](docs/DefaultApi.md#userkeys_get) | **GET** /userkeys/ | all userkeys/battery system identifiers for the current user
 
 
 ## Documentation For Models
