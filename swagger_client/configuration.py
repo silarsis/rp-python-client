@@ -56,7 +56,7 @@ class Configuration(object):
         Constructor
         """
         # Default Base url
-        self.host = "https://virtserver.swaggerhub.com/silarsis/repositpower/1.0.0"
+        self.host = "https://api.repositpower.com/v2"
         # Default api client
         self.api_client = None
         # Temp file folder for downloading files

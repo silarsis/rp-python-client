@@ -68,7 +68,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://virtserver.swaggerhub.com/silarsis/repositpower/1.0.0*
+All URIs are relative to *https://api.repositpower.com/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
