@@ -94,6 +94,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
+ - [InlineResponse2003Data](docs/InlineResponse2003Data.md)
+ - [InlineResponse2004](docs/InlineResponse2004.md)
 
 
 ## Documentation For Authorization

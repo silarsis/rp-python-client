@@ -163,7 +163,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_battery_capacity_get**
-> InlineResponse2003 deployments_userkey_battery_capacity_get(userkey)
+> InlineResponse2004 deployments_userkey_battery_capacity_get(userkey)
 
 battery capacity in kWh
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -272,7 +272,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_components_get**
-> deployments_userkey_components_get(userkey)
+> InlineResponse2003 deployments_userkey_components_get(userkey)
 
 installed components and their overall status
 
@@ -295,7 +295,8 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 
 try: 
     # installed components and their overall status
-    api_instance.deployments_userkey_components_get(userkey)
+    api_response = api_instance.deployments_userkey_components_get(userkey)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_components_get: %s\n" % e)
 ```
@@ -308,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
