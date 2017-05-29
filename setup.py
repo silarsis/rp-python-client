@@ -3,7 +3,7 @@
 """
     RepositPower External
 
-    Unofficial RepositPower External API
+    Unofficial RepositPower External API This API is built by hand from the description at https://api.repositpower.com/docs/ It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that. 
 
     OpenAPI spec version: 1.0.0
     Contact: kevin@littlejohn.id.au
@@ -48,7 +48,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Unofficial RepositPower External API
+    Unofficial RepositPower External API This API is built by hand from the description at https://api.repositpower.com/docs/ It should not be mistaken for official in any way shape or form, it&#39;s simply my attempt to document the API and build some client libraries from that. 
     """
 )
 
