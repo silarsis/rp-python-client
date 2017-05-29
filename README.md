@@ -73,7 +73,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/silarsis/repositpowe
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**auth_login_get**](docs/DefaultApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
-*DefaultApi* | [**auth_login_post**](docs/DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
+*DefaultApi* | [**auth_login_post**](docs/DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 *DefaultApi* | [**auth_logout_get**](docs/DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
 *DefaultApi* | [**deployments_userkey_battery_capacity_get**](docs/DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
 *DefaultApi* | [**deployments_userkey_battery_historical_soc_get**](docs/DefaultApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh

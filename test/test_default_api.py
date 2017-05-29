@@ -54,7 +54,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for auth_login_post
 
-        return access token upon successful basic or html auth (use username/password, or use basic auth)
+        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         """
         pass
 

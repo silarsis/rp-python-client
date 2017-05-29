@@ -5,7 +5,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/silarsis/repositpowe
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**auth_login_get**](DefaultApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
-[**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token upon successful basic or html auth (use username/password, or use basic auth)
+[**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 [**auth_logout_get**](DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
 [**deployments_userkey_battery_capacity_get**](DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
 [**deployments_userkey_battery_historical_soc_get**](DefaultApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh
@@ -70,7 +70,7 @@ This endpoint does not need any parameter.
 # **auth_login_post**
 > InlineResponse200 auth_login_post(body=body)
 
-return access token upon successful basic or html auth (use username/password, or use basic auth)
+return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 
 Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
 
@@ -87,7 +87,7 @@ api_instance = swagger_client.DefaultApi()
 body = swagger_client.AuthParams() # AuthParams |  (optional)
 
 try: 
-    # return access token upon successful basic or html auth (use username/password, or use basic auth)
+    # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
     api_response = api_instance.auth_login_post(body=body)
     pprint(api_response)
 except ApiException as e:

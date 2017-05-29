@@ -158,7 +158,7 @@ class DefaultApi(object):
 
     def auth_login_post(self, **kwargs):
         """
-        return access token upon successful basic or html auth (use username/password, or use basic auth)
+        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -185,7 +185,7 @@ class DefaultApi(object):
 
     def auth_login_post_with_http_info(self, **kwargs):
         """
-        return access token upon successful basic or html auth (use username/password, or use basic auth)
+        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
 
         This method makes a synchronous HTTP request by default. To make an
