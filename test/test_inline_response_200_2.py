@@ -24,19 +24,30 @@
 
 from __future__ import absolute_import
 
-# import models into sdk package
-from .models.auth_params import AuthParams
-from .models.inline_response_200 import InlineResponse200
-from .models.inline_response_200_1 import InlineResponse2001
-from .models.inline_response_200_2 import InlineResponse2002
-from .models.userkeys_response import UserkeysResponse
+import os
+import sys
+import unittest
 
-# import apis into sdk package
-from .apis.default_api import DefaultApi
+import swagger_client
+from swagger_client.rest import ApiException
+from swagger_client.models.inline_response_200_2 import InlineResponse2002
 
-# import ApiClient
-from .api_client import ApiClient
 
-from .configuration import Configuration
+class TestInlineResponse2002(unittest.TestCase):
+    """ InlineResponse2002 unit test stubs """
 
-configuration = Configuration()
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def testInlineResponse2002(self):
+        """
+        Test InlineResponse2002
+        """
+        model = swagger_client.models.inline_response_200_2.InlineResponse2002()
+
+
+if __name__ == '__main__':
+    unittest.main()

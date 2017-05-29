@@ -163,7 +163,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_battery_capacity_get**
-> deployments_userkey_battery_capacity_get(userkey)
+> InlineResponse2002 deployments_userkey_battery_capacity_get(userkey)
 
 battery capacity in kWh
 
@@ -186,7 +186,8 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 
 try: 
     # battery capacity in kWh
-    api_instance.deployments_userkey_battery_capacity_get(userkey)
+    api_response = api_instance.deployments_userkey_battery_capacity_get(userkey)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_battery_capacity_get: %s\n" % e)
 ```
@@ -199,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
