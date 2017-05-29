@@ -92,7 +92,7 @@ Class | Method | HTTP request | Description
  - [AuthParams](docs/AuthParams.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
- - [InlineResponse2002](docs/InlineResponse2002.md)
+ - [UserkeysResponse](docs/UserkeysResponse.md)
 
 
 ## Documentation For Authorization

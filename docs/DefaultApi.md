@@ -669,7 +669,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userkeys_get**
-> InlineResponse2002 userkeys_get()
+> UserkeysResponse userkeys_get()
 
 all userkeys/battery system identifiers for the current user
 
@@ -702,7 +702,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**UserkeysResponse**](UserkeysResponse.md)
 
 ### Authorization
 

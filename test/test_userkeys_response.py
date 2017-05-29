@@ -24,8 +24,30 @@
 
 from __future__ import absolute_import
 
-# import models into model package
-from .auth_params import AuthParams
-from .inline_response_200 import InlineResponse200
-from .inline_response_200_1 import InlineResponse2001
-from .userkeys_response import UserkeysResponse
+import os
+import sys
+import unittest
+
+import swagger_client
+from swagger_client.rest import ApiException
+from swagger_client.models.userkeys_response import UserkeysResponse
+
+
+class TestUserkeysResponse(unittest.TestCase):
+    """ UserkeysResponse unit test stubs """
+
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def testUserkeysResponse(self):
+        """
+        Test UserkeysResponse
+        """
+        model = swagger_client.models.userkeys_response.UserkeysResponse()
+
+
+if __name__ == '__main__':
+    unittest.main()
