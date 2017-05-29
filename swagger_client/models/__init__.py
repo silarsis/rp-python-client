@@ -28,3 +28,4 @@ from __future__ import absolute_import
 from .auth_params import AuthParams
 from .inline_response_200 import InlineResponse200
 from .inline_response_200_1 import InlineResponse2001
+from .inline_response_200_2 import InlineResponse2002

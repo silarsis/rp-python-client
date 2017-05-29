@@ -669,7 +669,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userkeys_get**
-> userkeys_get()
+> InlineResponse2002 userkeys_get()
 
 all userkeys/battery system identifiers for the current user
 
@@ -691,7 +691,8 @@ api_instance = swagger_client.DefaultApi()
 
 try: 
     # all userkeys/battery system identifiers for the current user
-    api_instance.userkeys_get()
+    api_response = api_instance.userkeys_get()
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->userkeys_get: %s\n" % e)
 ```
@@ -701,7 +702,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
