@@ -3,7 +3,7 @@
 """
     RepositPower External
 
-    Unofficial RepositPower External API This API is built by hand from the description at https://api.repositpower.com/docs/ It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that. 
+    Unofficial RepositPower External API This API is built by hand from the description at https://api.repositpower.com/docs/ It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that.  This API is demonstrably wrong around authentication - please read the official docco at the link above for accurate details. It will login, but all the login options are not captured - I wasn't clear how to write up both basic and token login being available on all URLs.  This API is also not completed yet. 
 
     OpenAPI spec version: 1.0.0
     Contact: kevin@littlejohn.id.au
