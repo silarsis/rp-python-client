@@ -42,7 +42,7 @@ class UserkeysResponse(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'user_keys': 'list[ERRORUNKNOWN]'
+            'user_keys': 'list[str]'
         }
 
         self.attribute_map = {
@@ -59,7 +59,7 @@ class UserkeysResponse(object):
 
 
         :return: The user_keys of this UserkeysResponse.
-        :rtype: list[ERRORUNKNOWN]
+        :rtype: list[str]
         """
         return self._user_keys
 
@@ -70,7 +70,7 @@ class UserkeysResponse(object):
 
 
         :param user_keys: The user_keys of this UserkeysResponse.
-        :type: list[ERRORUNKNOWN]
+        :type: list[str]
         """
 
         self._user_keys = user_keys
