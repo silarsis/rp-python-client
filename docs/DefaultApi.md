@@ -163,7 +163,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_battery_capacity_get**
-> InlineResponse2002 deployments_userkey_battery_capacity_get(userkey)
+> InlineResponse2003 deployments_userkey_battery_capacity_get(userkey)
 
 battery capacity in kWh
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -670,7 +670,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userkeys_get**
-> UserkeysResponse userkeys_get()
+> InlineResponse2002 userkeys_get()
 
 all userkeys/battery system identifiers for the current user
 
@@ -703,7 +703,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UserkeysResponse**](UserkeysResponse.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

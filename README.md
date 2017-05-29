@@ -93,7 +93,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
- - [UserkeysResponse](docs/UserkeysResponse.md)
+ - [InlineResponse2003](docs/InlineResponse2003.md)
 
 
 ## Documentation For Authorization
