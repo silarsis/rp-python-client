@@ -90,13 +90,13 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AuthParams](docs/AuthParams.md)
+ - [HouseData](docs/HouseData.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse20010](docs/InlineResponse20010.md)
  - [InlineResponse20011](docs/InlineResponse20011.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
- - [InlineResponse2003Data](docs/InlineResponse2003Data.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)

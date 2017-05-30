@@ -42,7 +42,7 @@ class InlineResponse2007(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'data': 'InlineResponse2003Data',
+            'data': 'HouseData',
             'house_p': 'TimestampMeter'
         }
 
@@ -62,7 +62,7 @@ class InlineResponse2007(object):
 
 
         :return: The data of this InlineResponse2007.
-        :rtype: InlineResponse2003Data
+        :rtype: HouseData
         """
         return self._data
 
@@ -73,7 +73,7 @@ class InlineResponse2007(object):
 
 
         :param data: The data of this InlineResponse2007.
-        :type: InlineResponse2003Data
+        :type: HouseData
         """
 
         self._data = data

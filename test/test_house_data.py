@@ -24,29 +24,30 @@
 
 from __future__ import absolute_import
 
-# import models into sdk package
-from .models.auth_params import AuthParams
-from .models.house_data import HouseData
-from .models.inline_response_200 import InlineResponse200
-from .models.inline_response_200_1 import InlineResponse2001
-from .models.inline_response_200_10 import InlineResponse20010
-from .models.inline_response_200_11 import InlineResponse20011
-from .models.inline_response_200_2 import InlineResponse2002
-from .models.inline_response_200_3 import InlineResponse2003
-from .models.inline_response_200_4 import InlineResponse2004
-from .models.inline_response_200_5 import InlineResponse2005
-from .models.inline_response_200_6 import InlineResponse2006
-from .models.inline_response_200_7 import InlineResponse2007
-from .models.inline_response_200_8 import InlineResponse2008
-from .models.inline_response_200_9 import InlineResponse2009
-from .models.timestamp_meter import TimestampMeter
+import os
+import sys
+import unittest
 
-# import apis into sdk package
-from .apis.default_api import DefaultApi
+import swagger_client
+from swagger_client.rest import ApiException
+from swagger_client.models.house_data import HouseData
 
-# import ApiClient
-from .api_client import ApiClient
 
-from .configuration import Configuration
+class TestHouseData(unittest.TestCase):
+    """ HouseData unit test stubs """
 
-configuration = Configuration()
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def testHouseData(self):
+        """
+        Test HouseData
+        """
+        model = swagger_client.models.house_data.HouseData()
+
+
+if __name__ == '__main__':
+    unittest.main()
