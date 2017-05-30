@@ -237,7 +237,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # state of charge of a battery in kWh
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -347,7 +347,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # energy cost in $
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -406,7 +406,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # solar generation data as negative real_power in kW
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -465,7 +465,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # earned gridcredits
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -524,7 +524,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # house consumption in kW
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -583,7 +583,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # the battery inverter data as real_power in kW
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -642,7 +642,7 @@ userkey = 'userkey_example' # str | User Key from /userkeys
 delta_t = 56 # int | downsample interval (optional)
 start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
-format = 'format_example' # str | json or csv (optional)
+format = 'format_example' # str |  (optional)
 
 try: 
     # real power measurements in kW at the grid connection
@@ -660,7 +660,7 @@ Name | Type | Description  | Notes
  **delta_t** | **int**| downsample interval | [optional] 
  **start** | **int**| Start time | [optional] 
  **end** | **int**| End time | [optional] 
- **format** | **str**| json or csv | [optional] 
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
