@@ -28,12 +28,16 @@ from __future__ import absolute_import
 from .models.auth_params import AuthParams
 from .models.inline_response_200 import InlineResponse200
 from .models.inline_response_200_1 import InlineResponse2001
+from .models.inline_response_200_10 import InlineResponse20010
 from .models.inline_response_200_2 import InlineResponse2002
 from .models.inline_response_200_3 import InlineResponse2003
 from .models.inline_response_200_3_data import InlineResponse2003Data
 from .models.inline_response_200_4 import InlineResponse2004
 from .models.inline_response_200_5 import InlineResponse2005
 from .models.inline_response_200_6 import InlineResponse2006
+from .models.inline_response_200_7 import InlineResponse2007
+from .models.inline_response_200_8 import InlineResponse2008
+from .models.inline_response_200_9 import InlineResponse2009
 
 # import apis into sdk package
 from .apis.default_api import DefaultApi

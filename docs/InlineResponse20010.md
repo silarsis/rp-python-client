@@ -1,9 +1,9 @@
-# InlineResponse2005
+# InlineResponse20010
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**solar_p** | **list[list[float]]** |  | [optional] 
+**retail_cost** | **list[list[float]]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

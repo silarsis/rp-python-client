@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_battery_historical_soc_get**
-> InlineResponse2005 deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse2008 deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 state of charge of a battery in kWh
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_cost_historical_get**
-> deployments_userkey_cost_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse20010 deployments_userkey_cost_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 energy cost in $
 
@@ -351,7 +351,8 @@ format = 'format_example' # str | json or csv (optional)
 
 try: 
     # energy cost in $
-    api_instance.deployments_userkey_cost_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    api_response = api_instance.deployments_userkey_cost_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_cost_historical_get: %s\n" % e)
 ```
@@ -368,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -382,7 +383,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_generation_historical_p_get**
-> deployments_userkey_generation_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse2005 deployments_userkey_generation_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 solar generation data as negative real_power in kW
 
@@ -409,7 +410,8 @@ format = 'format_example' # str | json or csv (optional)
 
 try: 
     # solar generation data as negative real_power in kW
-    api_instance.deployments_userkey_generation_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    api_response = api_instance.deployments_userkey_generation_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_generation_historical_p_get: %s\n" % e)
 ```
@@ -426,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -440,7 +442,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_gridcredits_historical_get**
-> deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse20010 deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 earned gridcredits
 
@@ -467,7 +469,8 @@ format = 'format_example' # str | json or csv (optional)
 
 try: 
     # earned gridcredits
-    api_instance.deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    api_response = api_instance.deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_gridcredits_historical_get: %s\n" % e)
 ```
@@ -484,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -498,7 +501,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_house_historical_get**
-> deployments_userkey_house_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse2007 deployments_userkey_house_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 house consumption in kW
 
@@ -525,7 +528,8 @@ format = 'format_example' # str | json or csv (optional)
 
 try: 
     # house consumption in kW
-    api_instance.deployments_userkey_house_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    api_response = api_instance.deployments_userkey_house_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_house_historical_get: %s\n" % e)
 ```
@@ -542,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -556,7 +560,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_inverter_historical_p_get**
-> deployments_userkey_inverter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse2006 deployments_userkey_inverter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 the battery inverter data as real_power in kW
 
@@ -583,7 +587,8 @@ format = 'format_example' # str | json or csv (optional)
 
 try: 
     # the battery inverter data as real_power in kW
-    api_instance.deployments_userkey_inverter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    api_response = api_instance.deployments_userkey_inverter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_inverter_historical_p_get: %s\n" % e)
 ```
@@ -600,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -614,7 +619,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_meter_historical_p_get**
-> InlineResponse2006 deployments_userkey_meter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse2009 deployments_userkey_meter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 real power measurements in kW at the grid connection
 
@@ -659,7 +664,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
