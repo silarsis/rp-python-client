@@ -39,6 +39,7 @@ from .models.inline_response_200_6 import InlineResponse2006
 from .models.inline_response_200_7 import InlineResponse2007
 from .models.inline_response_200_8 import InlineResponse2008
 from .models.inline_response_200_9 import InlineResponse2009
+from .models.timestamp_meter import TimestampMeter
 
 # import apis into sdk package
 from .apis.default_api import DefaultApi

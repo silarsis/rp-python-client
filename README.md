@@ -103,6 +103,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse2009](docs/InlineResponse2009.md)
+ - [TimestampMeter](docs/TimestampMeter.md)
 
 
 ## Documentation For Authorization
