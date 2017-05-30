@@ -42,7 +42,7 @@ class InlineResponse20011(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'gridcredits': 'list[list[float]]'
+            'gridcredits': 'TimestampMeter'
         }
 
         self.attribute_map = {
@@ -59,7 +59,7 @@ class InlineResponse20011(object):
 
 
         :return: The gridcredits of this InlineResponse20011.
-        :rtype: list[list[float]]
+        :rtype: TimestampMeter
         """
         return self._gridcredits
 
@@ -70,7 +70,7 @@ class InlineResponse20011(object):
 
 
         :param gridcredits: The gridcredits of this InlineResponse20011.
-        :type: list[list[float]]
+        :type: TimestampMeter
         """
 
         self._gridcredits = gridcredits

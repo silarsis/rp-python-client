@@ -43,7 +43,7 @@ class InlineResponse2007(object):
         """
         self.swagger_types = {
             'data': 'InlineResponse2003Data',
-            'house_p': 'list[list[float]]'
+            'house_p': 'TimestampMeter'
         }
 
         self.attribute_map = {
@@ -85,7 +85,7 @@ class InlineResponse2007(object):
 
 
         :return: The house_p of this InlineResponse2007.
-        :rtype: list[list[float]]
+        :rtype: TimestampMeter
         """
         return self._house_p
 
@@ -96,7 +96,7 @@ class InlineResponse2007(object):
 
 
         :param house_p: The house_p of this InlineResponse2007.
-        :type: list[list[float]]
+        :type: TimestampMeter
         """
 
         self._house_p = house_p

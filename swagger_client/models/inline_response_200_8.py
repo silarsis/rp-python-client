@@ -43,7 +43,7 @@ class InlineResponse2008(object):
         """
         self.swagger_types = {
             'battery_capacity': 'float',
-            'battery_soc': 'list[list[float]]'
+            'battery_soc': 'TimestampMeter'
         }
 
         self.attribute_map = {
@@ -85,7 +85,7 @@ class InlineResponse2008(object):
 
 
         :return: The battery_soc of this InlineResponse2008.
-        :rtype: list[list[float]]
+        :rtype: TimestampMeter
         """
         return self._battery_soc
 
@@ -96,7 +96,7 @@ class InlineResponse2008(object):
 
 
         :param battery_soc: The battery_soc of this InlineResponse2008.
-        :type: list[list[float]]
+        :type: TimestampMeter
         """
 
         self._battery_soc = battery_soc

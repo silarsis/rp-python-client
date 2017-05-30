@@ -42,7 +42,7 @@ class InlineResponse2009(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'meter_p': 'list[list[float]]'
+            'meter_p': 'TimestampMeter'
         }
 
         self.attribute_map = {
@@ -59,7 +59,7 @@ class InlineResponse2009(object):
 
 
         :return: The meter_p of this InlineResponse2009.
-        :rtype: list[list[float]]
+        :rtype: TimestampMeter
         """
         return self._meter_p
 
@@ -70,7 +70,7 @@ class InlineResponse2009(object):
 
 
         :param meter_p: The meter_p of this InlineResponse2009.
-        :type: list[list[float]]
+        :type: TimestampMeter
         """
 
         self._meter_p = meter_p
