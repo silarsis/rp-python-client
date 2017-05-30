@@ -502,7 +502,7 @@ class DefaultApi(object):
         :param int start: Start time
         :param int end: End time
         :param str format: json or csv
-        :return: None
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -533,7 +533,7 @@ class DefaultApi(object):
         :param int start: Start time
         :param int end: End time
         :param str format: json or csv
-        :return: None
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -604,7 +604,7 @@ class DefaultApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type=None,
+                                            response_type='InlineResponse2005',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'),

@@ -32,3 +32,4 @@ from .inline_response_200_2 import InlineResponse2002
 from .inline_response_200_3 import InlineResponse2003
 from .inline_response_200_3_data import InlineResponse2003Data
 from .inline_response_200_4 import InlineResponse2004
+from .inline_response_200_5 import InlineResponse2005

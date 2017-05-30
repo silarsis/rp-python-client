@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_battery_historical_soc_get**
-> deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse2005 deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 state of charge of a battery in kWh
 
@@ -241,7 +241,8 @@ format = 'format_example' # str | json or csv (optional)
 
 try: 
     # state of charge of a battery in kWh
-    api_instance.deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    api_response = api_instance.deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->deployments_userkey_battery_historical_soc_get: %s\n" % e)
 ```
@@ -258,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
