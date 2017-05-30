@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deployments_userkey_gridcredits_historical_get**
-> InlineResponse20010 deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
+> InlineResponse20011 deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
 
 earned gridcredits
 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

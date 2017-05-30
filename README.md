@@ -93,6 +93,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse20010](docs/InlineResponse20010.md)
+ - [InlineResponse20011](docs/InlineResponse20011.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2003Data](docs/InlineResponse2003Data.md)
