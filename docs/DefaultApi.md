@@ -5,7 +5,7 @@ All URIs are relative to *https://api.repositpower.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**auth_login_get**](DefaultApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
-[**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
+[**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth)
 [**auth_logout_get**](DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
 [**deployments_userkey_battery_capacity_get**](DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
 [**deployments_userkey_battery_historical_soc_get**](DefaultApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh
@@ -24,9 +24,9 @@ Method | HTTP request | Description
 
 return access token upon successful basic auth
 
-Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+Send username and password as basic auth and you will get back an access_token value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -41,7 +41,7 @@ swagger_client.configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
 
-try: 
+try:
     # return access token upon successful basic auth
     api_response = api_instance.auth_login_get()
     pprint(api_response)
@@ -70,11 +70,11 @@ This endpoint does not need any parameter.
 # **auth_login_post**
 > InlineResponse200 auth_login_post(body=body)
 
-return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
+return access token (session id) upon successful basic or html auth (use username/password, or use basic auth)
 
-Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+Post username and password and you will get back an access_token value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token.
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -86,8 +86,8 @@ from pprint import pprint
 api_instance = swagger_client.DefaultApi()
 body = swagger_client.AuthParams() # AuthParams |  (optional)
 
-try: 
-    # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
+try:
+    # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth)
     api_response = api_instance.auth_login_post(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -98,7 +98,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AuthParams**](AuthParams.md)|  | [optional] 
+ **body** | [**AuthParams**](AuthParams.md)|  | [optional]
 
 ### Return type
 
@@ -120,7 +120,7 @@ No authorization required
 
 de-authenticate the token (always returns success)
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -136,7 +136,7 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
 
-try: 
+try:
     # de-authenticate the token (always returns success)
     api_response = api_instance.auth_logout_get()
     pprint(api_response)
@@ -167,7 +167,7 @@ This endpoint does not need any parameter.
 
 battery capacity in kWh
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -184,7 +184,7 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = swagger_client.DefaultApi()
 userkey = 'userkey_example' # str | User Key from /userkeys
 
-try: 
+try:
     # battery capacity in kWh
     api_response = api_instance.deployments_userkey_battery_capacity_get(userkey)
     pprint(api_response)
@@ -196,7 +196,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
+ **userkey** | **str**| User Key from /userkeys |
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 state of charge of a battery in kWh
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -239,7 +239,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # state of charge of a battery in kWh
     api_response = api_instance.deployments_userkey_battery_historical_soc_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -251,11 +251,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 installed components and their overall status
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -294,7 +294,7 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = swagger_client.DefaultApi()
 userkey = 'userkey_example' # str | User Key from /userkeys
 
-try: 
+try:
     # installed components and their overall status
     api_response = api_instance.deployments_userkey_components_get(userkey)
     pprint(api_response)
@@ -306,7 +306,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
+ **userkey** | **str**| User Key from /userkeys |
 
 ### Return type
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 energy cost in $
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -349,7 +349,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # energy cost in $
     api_response = api_instance.deployments_userkey_cost_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -361,11 +361,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 solar generation data as negative real_power in kW
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -408,7 +408,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # solar generation data as negative real_power in kW
     api_response = api_instance.deployments_userkey_generation_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -420,11 +420,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 earned gridcredits
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -467,7 +467,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # earned gridcredits
     api_response = api_instance.deployments_userkey_gridcredits_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -479,11 +479,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 house consumption in kW
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -526,7 +526,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # house consumption in kW
     api_response = api_instance.deployments_userkey_house_historical_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -538,11 +538,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 
 the battery inverter data as real_power in kW
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -585,7 +585,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # the battery inverter data as real_power in kW
     api_response = api_instance.deployments_userkey_inverter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -597,11 +597,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -623,7 +623,7 @@ Name | Type | Description  | Notes
 
 real power measurements in kW at the grid connection
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -644,7 +644,7 @@ start = 56 # int | Start time (optional)
 end = 56 # int | End time (optional)
 format = 'format_example' # str |  (optional)
 
-try: 
+try:
     # real power measurements in kW at the grid connection
     api_response = api_instance.deployments_userkey_meter_historical_p_get(userkey, delta_t=delta_t, start=start, end=end, format=format)
     pprint(api_response)
@@ -656,11 +656,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userkey** | **str**| User Key from /userkeys | 
- **delta_t** | **int**| downsample interval | [optional] 
- **start** | **int**| Start time | [optional] 
- **end** | **int**| End time | [optional] 
- **format** | **str**|  | [optional] 
+ **userkey** | **str**| User Key from /userkeys |
+ **delta_t** | **int**| downsample interval | [optional]
+ **start** | **int**| Start time | [optional]
+ **end** | **int**| End time | [optional]
+ **format** | **str**|  | [optional]
 
 ### Return type
 
@@ -682,7 +682,7 @@ Name | Type | Description  | Notes
 
 all userkeys/battery system identifiers for the current user
 
-### Example 
+### Example
 ```python
 from __future__ import print_statement
 import time
@@ -698,7 +698,7 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
 
-try: 
+try:
     # all userkeys/battery system identifiers for the current user
     api_response = api_instance.userkeys_get()
     pprint(api_response)
@@ -723,4 +723,3 @@ This endpoint does not need any parameter.
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
