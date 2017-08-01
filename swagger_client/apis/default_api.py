@@ -3,7 +3,7 @@
 """
     RepositPower External
 
-    Unofficial RepositPower External API  This API is built by hand from the description at https://api.repositpower.com/docs/  It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that.  This API is demonstrably wrong around authentication - please read the official docco at the link above for accurate details. It will login, but all the login options are not captured - I wasn't clear how to write up both basic and token login being available on all URLs (ie. how to make auth an either/or rather than a both).  This API is also not completed yet. I've note tested a bunch of 200 responses, and some that I have don't have accurate enums in them because I don't know all the possible values.  Also, I haven't quite figured out how to wrap the whole thing in unit tests.  This version (1.0.0) matches version 11/03/2016 of the official docs (as at 30/5/2017) 
+    Unofficial RepositPower External API  This API is built by hand from the description at https://api.repositpower.com/docs/  It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that.  This API is demonstrably wrong around authentication - please read the official docco at the link above for accurate details. It will login, but all the login options are not captured - I wasn't clear how to write up both basic and token login being available on all URLs (ie. how to make auth an either/or rather than a both).  This API is also not completed yet. I've note tested a bunch of 200 responses, and some that I have don't have accurate enums in them because I don't know all the possible values.  Also, I haven't quite figured out how to wrap the whole thing in unit tests.  This version (1.0.0) matches version 11/03/2016 of the official docs (as at 30/5/2017)
 
     OpenAPI spec version: 1.0.0
     Contact: kevin@littlejohn.id.au
@@ -54,7 +54,7 @@ class DefaultApi(object):
     def auth_login_get(self, **kwargs):
         """
         return access token upon successful basic auth
-        Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+        Send username and password as basic auth and you will get back an access_token value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token.
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -80,7 +80,7 @@ class DefaultApi(object):
     def auth_login_get_with_http_info(self, **kwargs):
         """
         return access token upon successful basic auth
-        Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+        Send username and password as basic auth and you will get back an access_token value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token.
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -158,8 +158,8 @@ class DefaultApi(object):
 
     def auth_login_post(self, **kwargs):
         """
-        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
-        Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth)
+        Post username and password and you will get back an access_token value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token.
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -171,7 +171,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AuthParams body: 
+        :param AuthParams body:
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
@@ -185,8 +185,8 @@ class DefaultApi(object):
 
     def auth_login_post_with_http_info(self, **kwargs):
         """
-        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
-        Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
+        return access token (session id) upon successful basic or html auth (use username/password, or use basic auth)
+        Post username and password and you will get back an access_token value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token.
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -198,7 +198,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param AuthParams body: 
+        :param AuthParams body:
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
@@ -268,7 +268,7 @@ class DefaultApi(object):
     def auth_logout_get(self, **kwargs):
         """
         de-authenticate the token (always returns success)
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -294,7 +294,7 @@ class DefaultApi(object):
     def auth_logout_get_with_http_info(self, **kwargs):
         """
         de-authenticate the token (always returns success)
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -373,7 +373,7 @@ class DefaultApi(object):
     def deployments_userkey_battery_capacity_get(self, userkey, **kwargs):
         """
         battery capacity in kWh
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -400,7 +400,7 @@ class DefaultApi(object):
     def deployments_userkey_battery_capacity_get_with_http_info(self, userkey, **kwargs):
         """
         battery capacity in kWh
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -485,7 +485,7 @@ class DefaultApi(object):
     def deployments_userkey_battery_historical_soc_get(self, userkey, **kwargs):
         """
         state of charge of a battery in kWh
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -501,7 +501,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
@@ -516,7 +516,7 @@ class DefaultApi(object):
     def deployments_userkey_battery_historical_soc_get_with_http_info(self, userkey, **kwargs):
         """
         state of charge of a battery in kWh
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -532,7 +532,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
@@ -615,7 +615,7 @@ class DefaultApi(object):
     def deployments_userkey_components_get(self, userkey, **kwargs):
         """
         installed components and their overall status
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -642,7 +642,7 @@ class DefaultApi(object):
     def deployments_userkey_components_get_with_http_info(self, userkey, **kwargs):
         """
         installed components and their overall status
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -727,7 +727,7 @@ class DefaultApi(object):
     def deployments_userkey_cost_historical_get(self, userkey, **kwargs):
         """
         energy cost in $
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -743,7 +743,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
@@ -758,7 +758,7 @@ class DefaultApi(object):
     def deployments_userkey_cost_historical_get_with_http_info(self, userkey, **kwargs):
         """
         energy cost in $
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -774,7 +774,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
@@ -857,7 +857,7 @@ class DefaultApi(object):
     def deployments_userkey_generation_historical_p_get(self, userkey, **kwargs):
         """
         solar generation data as negative real_power in kW
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -873,7 +873,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
@@ -888,7 +888,7 @@ class DefaultApi(object):
     def deployments_userkey_generation_historical_p_get_with_http_info(self, userkey, **kwargs):
         """
         solar generation data as negative real_power in kW
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -904,7 +904,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
@@ -987,7 +987,7 @@ class DefaultApi(object):
     def deployments_userkey_gridcredits_historical_get(self, userkey, **kwargs):
         """
         earned gridcredits
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1003,7 +1003,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1018,7 +1018,7 @@ class DefaultApi(object):
     def deployments_userkey_gridcredits_historical_get_with_http_info(self, userkey, **kwargs):
         """
         earned gridcredits
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1034,7 +1034,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1117,7 +1117,7 @@ class DefaultApi(object):
     def deployments_userkey_house_historical_get(self, userkey, **kwargs):
         """
         house consumption in kW
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1133,7 +1133,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1148,7 +1148,7 @@ class DefaultApi(object):
     def deployments_userkey_house_historical_get_with_http_info(self, userkey, **kwargs):
         """
         house consumption in kW
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1164,7 +1164,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1247,7 +1247,7 @@ class DefaultApi(object):
     def deployments_userkey_inverter_historical_p_get(self, userkey, **kwargs):
         """
         the battery inverter data as real_power in kW
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1263,7 +1263,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1278,7 +1278,7 @@ class DefaultApi(object):
     def deployments_userkey_inverter_historical_p_get_with_http_info(self, userkey, **kwargs):
         """
         the battery inverter data as real_power in kW
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1294,7 +1294,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1377,7 +1377,7 @@ class DefaultApi(object):
     def deployments_userkey_meter_historical_p_get(self, userkey, **kwargs):
         """
         real power measurements in kW at the grid connection
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1393,7 +1393,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1408,7 +1408,7 @@ class DefaultApi(object):
     def deployments_userkey_meter_historical_p_get_with_http_info(self, userkey, **kwargs):
         """
         real power measurements in kW at the grid connection
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1424,7 +1424,7 @@ class DefaultApi(object):
         :param int delta_t: downsample interval
         :param int start: Start time
         :param int end: End time
-        :param str format: 
+        :param str format:
         :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1507,7 +1507,7 @@ class DefaultApi(object):
     def userkeys_get(self, **kwargs):
         """
         all userkeys/battery system identifiers for the current user
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1533,7 +1533,7 @@ class DefaultApi(object):
     def userkeys_get_with_http_info(self, **kwargs):
         """
         all userkeys/battery system identifiers for the current user
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
