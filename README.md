@@ -50,14 +50,17 @@ import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
+
+# Configure HTTP basic authorization: basic
+swagger_client.configuration.username = 'YOUR_USERNAME'
+swagger_client.configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
 reposit_auth = 'API' # str |  (optional) (default to API)
-body = swagger_client.AuthParams() # AuthParams |  (optional)
 
 try:
     # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
-    api_response = api_instance.auth_login_post(reposit_auth=reposit_auth, body=body)
+    api_response = api_instance.auth_login_post(reposit_auth=reposit_auth)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->auth_login_post: %s\n" % e)
@@ -70,7 +73,7 @@ All URIs are relative to *https://api.repositpower.com/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**auth_login_post**](docs/DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
+*DefaultApi* | [**auth_login_post**](docs/DefaultApi.md#auth_login_post) | **POST** /auth/login/ | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 *DefaultApi* | [**auth_logout_get**](docs/DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
 *DefaultApi* | [**deployments_userkey_battery_capacity_get**](docs/DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
 *DefaultApi* | [**deployments_userkey_battery_historical_soc_get**](docs/DefaultApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh
@@ -86,7 +89,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AuthParams](docs/AuthParams.md)
  - [HouseData](docs/HouseData.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)

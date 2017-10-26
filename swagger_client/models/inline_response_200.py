@@ -43,7 +43,7 @@ class InlineResponse200(object):
         """
         self.swagger_types = {
             'access_token': 'str',
-            'expires_at': 'str'
+            'expires_at': 'float'
         }
 
         self.attribute_map = {
@@ -85,7 +85,7 @@ class InlineResponse200(object):
 
 
         :return: The expires_at of this InlineResponse200.
-        :rtype: str
+        :rtype: float
         """
         return self._expires_at
 
@@ -96,7 +96,7 @@ class InlineResponse200(object):
 
 
         :param expires_at: The expires_at of this InlineResponse200.
-        :type: str
+        :type: float
         """
 
         self._expires_at = expires_at

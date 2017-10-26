@@ -4,7 +4,7 @@ All URIs are relative to *https://api.repositpower.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
+[**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login/ | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 [**auth_logout_get**](DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
 [**deployments_userkey_battery_capacity_get**](DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
 [**deployments_userkey_battery_historical_soc_get**](DefaultApi.md#deployments_userkey_battery_historical_soc_get) | **GET** /deployments/{userkey}/battery/historical/soc | state of charge of a battery in kWh
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **auth_login_post**
-> InlineResponse200 auth_login_post(reposit_auth=reposit_auth, body=body)
+> InlineResponse200 auth_login_post(reposit_auth=reposit_auth)
 
 return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 
@@ -33,14 +33,17 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic
+swagger_client.configuration.username = 'YOUR_USERNAME'
+swagger_client.configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
 reposit_auth = 'API' # str |  (optional) (default to API)
-body = swagger_client.AuthParams() # AuthParams |  (optional)
 
 try: 
     # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
-    api_response = api_instance.auth_login_post(reposit_auth=reposit_auth, body=body)
+    api_response = api_instance.auth_login_post(reposit_auth=reposit_auth)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->auth_login_post: %s\n" % e)
@@ -51,7 +54,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reposit_auth** | **str**|  | [optional] [default to API]
- **body** | [**AuthParams**](AuthParams.md)|  | [optional] 
 
 ### Return type
 
@@ -59,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic](../README.md#basic)
 
 ### HTTP request headers
 

@@ -67,7 +67,6 @@ class DefaultApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str reposit_auth: 
-        :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
@@ -95,13 +94,12 @@ class DefaultApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str reposit_auth: 
-        :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['reposit_auth', 'body']
+        all_params = ['reposit_auth']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -120,7 +118,7 @@ class DefaultApi(object):
 
         collection_formats = {}
 
-        resource_path = '/auth/login'.replace('{format}', 'json')
+        resource_path = '/auth/login/'.replace('{format}', 'json')
         path_params = {}
 
         query_params = {}
@@ -133,8 +131,6 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
@@ -147,7 +143,7 @@ class DefaultApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['basic']
 
         return self.api_client.call_api(resource_path, 'POST',
                                             path_params,

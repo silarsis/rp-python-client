@@ -25,7 +25,6 @@
 from __future__ import absolute_import
 
 # import models into model package
-from .auth_params import AuthParams
 from .house_data import HouseData
 from .inline_response_200 import InlineResponse200
 from .inline_response_200_1 import InlineResponse2001
