@@ -51,7 +51,7 @@ class DefaultApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def auth_login_post(self, repsit_auth, **kwargs):
+    def auth_login_post(self, **kwargs):
         """
         return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
@@ -62,11 +62,11 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.auth_login_post(repsit_auth, callback=callback_function)
+        >>> thread = api.auth_login_post(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str repsit_auth:  (required)
+        :param str reposit_auth: 
         :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
@@ -74,12 +74,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.auth_login_post_with_http_info(repsit_auth, **kwargs)
+            return self.auth_login_post_with_http_info(**kwargs)
         else:
-            (data) = self.auth_login_post_with_http_info(repsit_auth, **kwargs)
+            (data) = self.auth_login_post_with_http_info(**kwargs)
             return data
 
-    def auth_login_post_with_http_info(self, repsit_auth, **kwargs):
+    def auth_login_post_with_http_info(self, **kwargs):
         """
         return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
@@ -90,18 +90,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.auth_login_post_with_http_info(repsit_auth, callback=callback_function)
+        >>> thread = api.auth_login_post_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str repsit_auth:  (required)
+        :param str reposit_auth: 
         :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['repsit_auth', 'body']
+        all_params = ['reposit_auth', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -116,9 +116,6 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'repsit_auth' is set
-        if ('repsit_auth' not in params) or (params['repsit_auth'] is None):
-            raise ValueError("Missing the required parameter `repsit_auth` when calling `auth_login_post`")
 
 
         collection_formats = {}
@@ -129,8 +126,8 @@ class DefaultApi(object):
         query_params = {}
 
         header_params = {}
-        if 'repsit_auth' in params:
-            header_params['Repsit-Auth'] = params['repsit_auth']
+        if 'reposit_auth' in params:
+            header_params['Reposit-Auth'] = params['reposit_auth']
 
         form_params = []
         local_var_files = {}

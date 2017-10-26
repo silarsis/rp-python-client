@@ -52,12 +52,12 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
-repsit_auth = 'API' # str |  (default to API)
+reposit_auth = 'API' # str |  (optional) (default to API)
 body = swagger_client.AuthParams() # AuthParams |  (optional)
 
 try:
     # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
-    api_response = api_instance.auth_login_post(repsit_auth, body=body)
+    api_response = api_instance.auth_login_post(reposit_auth=reposit_auth, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->auth_login_post: %s\n" % e)
