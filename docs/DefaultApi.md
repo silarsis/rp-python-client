@@ -4,7 +4,6 @@ All URIs are relative to *https://api.repositpower.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**auth_login_get**](DefaultApi.md#auth_login_get) | **GET** /auth/login | return access token upon successful basic auth
 [**auth_login_post**](DefaultApi.md#auth_login_post) | **POST** /auth/login | return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 [**auth_logout_get**](DefaultApi.md#auth_logout_get) | **GET** /auth/logout | de-authenticate the token (always returns success)
 [**deployments_userkey_battery_capacity_get**](DefaultApi.md#deployments_userkey_battery_capacity_get) | **GET** /deployments/{userkey}/battery/capacity | battery capacity in kWh
@@ -19,56 +18,8 @@ Method | HTTP request | Description
 [**userkeys_get**](DefaultApi.md#userkeys_get) | **GET** /userkeys/ | all userkeys/battery system identifiers for the current user
 
 
-# **auth_login_get**
-> InlineResponse200 auth_login_get()
-
-return access token upon successful basic auth
-
-Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
-
-### Example 
-```python
-from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure HTTP basic authorization: basic
-swagger_client.configuration.username = 'YOUR_USERNAME'
-swagger_client.configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = swagger_client.DefaultApi()
-
-try: 
-    # return access token upon successful basic auth
-    api_response = api_instance.auth_login_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->auth_login_get: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[basic](../README.md#basic)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **auth_login_post**
-> InlineResponse200 auth_login_post(body=body)
+> InlineResponse200 auth_login_post(repsit_auth, body=body)
 
 return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
 
@@ -84,11 +35,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
+repsit_auth = 'API' # str |  (default to API)
 body = swagger_client.AuthParams() # AuthParams |  (optional)
 
 try: 
     # return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
-    api_response = api_instance.auth_login_post(body=body)
+    api_response = api_instance.auth_login_post(repsit_auth, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->auth_login_post: %s\n" % e)
@@ -98,6 +50,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **repsit_auth** | **str**|  | [default to API]
  **body** | [**AuthParams**](AuthParams.md)|  | [optional] 
 
 ### Return type

@@ -3,7 +3,7 @@
 """
     RepositPower External
 
-    Unofficial RepositPower External API  This API is built by hand from the description at https://api.repositpower.com/docs/  It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that.  This API is demonstrably wrong around authentication - please read the official docco at the link above for accurate details. It will login, but all the login options are not captured - I wasn't clear how to write up both basic and token login being available on all URLs (ie. how to make auth an either/or rather than a both).  This API is also not completed yet. I've note tested a bunch of 200 responses, and some that I have don't have accurate enums in them because I don't know all the possible values.  Also, I haven't quite figured out how to wrap the whole thing in unit tests.  This version (1.0.0) matches version 11/03/2016 of the official docs (as at 30/5/2017) 
+    Unofficial RepositPower External API  This API is built by hand from the description at https://api.repositpower.com/docs/  It should not be mistaken for official in any way shape or form, it's simply my attempt to document the API and build some client libraries from that.  This API is demonstrably wrong around authentication - please read the official docco at the link above for accurate details. It will login, but all the login options are not captured - I wasn't clear how to write up both basic and token login being available on all URLs (ie. how to make auth an either/or rather than a both).  This API is also not completed yet. I've not tested a bunch of 200 responses, and some that I have don't have accurate enums in them because I don't know all the possible values.  Also, I haven't quite figured out how to wrap the whole thing in unit tests.  Publishes a swagger file to https://github.com/silarsis/repositpowerswagger and a python client library to https://github.com/silarsis/rp-python-client  This version (1.0.0) matches version 11/03/2016 of the official docs (as at 30/5/2017) 
 
     OpenAPI spec version: 1.0.0
     Contact: kevin@littlejohn.id.au
@@ -51,112 +51,7 @@ class DefaultApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def auth_login_get(self, **kwargs):
-        """
-        return access token upon successful basic auth
-        Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.auth_login_get(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: InlineResponse200
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.auth_login_get_with_http_info(**kwargs)
-        else:
-            (data) = self.auth_login_get_with_http_info(**kwargs)
-            return data
-
-    def auth_login_get_with_http_info(self, **kwargs):
-        """
-        return access token upon successful basic auth
-        Send username and password as basic auth and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.auth_login_get_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: InlineResponse200
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method auth_login_get" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-
-        collection_formats = {}
-
-        resource_path = '/auth/login'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = ['basic']
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='InlineResponse200',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            _request_timeout=params.get('_request_timeout'),
-                                            collection_formats=collection_formats)
-
-    def auth_login_post(self, **kwargs):
+    def auth_login_post(self, repsit_auth, **kwargs):
         """
         return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
@@ -167,10 +62,11 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.auth_login_post(callback=callback_function)
+        >>> thread = api.auth_login_post(repsit_auth, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str repsit_auth:  (required)
         :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
@@ -178,12 +74,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.auth_login_post_with_http_info(**kwargs)
+            return self.auth_login_post_with_http_info(repsit_auth, **kwargs)
         else:
-            (data) = self.auth_login_post_with_http_info(**kwargs)
+            (data) = self.auth_login_post_with_http_info(repsit_auth, **kwargs)
             return data
 
-    def auth_login_post_with_http_info(self, **kwargs):
+    def auth_login_post_with_http_info(self, repsit_auth, **kwargs):
         """
         return access token (session id) upon successful basic or html auth (use username/password, or use basic auth) 
         Post username and password and you will get back an RP-TOKEN value. Add that value to the Headers of all subsequent calls (see api_key security definition above) as your authenticated token. 
@@ -194,17 +90,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.auth_login_post_with_http_info(callback=callback_function)
+        >>> thread = api.auth_login_post_with_http_info(repsit_auth, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str repsit_auth:  (required)
         :param AuthParams body: 
         :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['repsit_auth', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -219,6 +116,9 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'repsit_auth' is set
+        if ('repsit_auth' not in params) or (params['repsit_auth'] is None):
+            raise ValueError("Missing the required parameter `repsit_auth` when calling `auth_login_post`")
 
 
         collection_formats = {}
@@ -229,6 +129,8 @@ class DefaultApi(object):
         query_params = {}
 
         header_params = {}
+        if 'repsit_auth' in params:
+            header_params['Repsit-Auth'] = params['repsit_auth']
 
         form_params = []
         local_var_files = {}
